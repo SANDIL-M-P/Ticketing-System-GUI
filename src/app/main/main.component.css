@@ -1,0 +1,58 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  background-color: #282828;
+  height: auto;
+}
+
+.ticketing-display-container {
+  margin-top: 30px;
+}
+
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.center-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.right-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Ensure vertical alignment */
+}
+
+.left-section {
+  width: 20%; /* Adjust width as needed for ticketing display */
+}
+
+.center-section {
+  flex-grow: 1; /* Take the remaining space in the center */
+}
+
+.right-section {
+  width: 20%; /* Adjust width as needed for start-stop */
+}
+
+
+.configuration-display {
+  background-color: #282828;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+}
+
+

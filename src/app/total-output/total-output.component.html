@@ -1,0 +1,10 @@
+
+<div class="ticket-status">
+  <h3>Ticket Status</h3>
+  <div>Available Tickets: {{ availableTickets }}</div>
+
+  <h4>Updates:</h4>
+  <ul>
+    <li *ngFor="let message of ticketMessages">{{ message }}</li>
+  </ul>
+</div>

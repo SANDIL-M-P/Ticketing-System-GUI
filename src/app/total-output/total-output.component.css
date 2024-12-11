@@ -1,0 +1,35 @@
+.ticket-status {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  max-width: 100%;
+  color: white;
+  justify-content: left top;
+  margin-top: 50px;
+}
+
+.ticket-status h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  align-items: center;
+}
+
+.ticket-status p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: not-allowed;
+}
+
+button:enabled {
+  cursor: pointer;
+  background-color: #45a049;
+}

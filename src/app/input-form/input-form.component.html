@@ -1,0 +1,48 @@
+
+<div class="form-container">
+  <h2>Configuration Settings</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Max Ticket Capacity</label>
+      <input
+        type="number" min="0"
+        [(ngModel)]="formData.maxTicketCapacity"
+        name="max-capacity"
+        required
+        placeholder="Enter max ticket capacity"
+      />
+    </div>
+    <div class="form-group">
+      <label>Total Ticket Capacity</label>
+      <input
+        type="number" min="0"
+        [(ngModel)]="formData.totalTickets"
+        name="total-capacity"
+        required
+        placeholder="Enter total ticket capacity"
+      />
+    </div>
+    <div class="form-group">
+      <label>Ticket Release Rate</label>
+      <input
+        type="number" min="0"
+        [(ngModel)]="formData.ticketReleaseRate"
+        name="release-rate"
+        required
+        placeholder="Enter ticket release rate"
+      />
+    </div>
+    <div class="form-group">
+      <label>Customer Retrieval Rate</label>
+      <input
+        type="number" min="0"
+        [(ngModel)]="formData.customerRetrievalRate"
+        name="retrieval-rate"
+        required
+        placeholder="Enter customer retrieval rate"
+      />
+    </div>
+    <button type="submit">Submit</button>
+    <button type="button" (click)="loadConfiguration()">Load Configuration</button>
+  </form>
+</div>
