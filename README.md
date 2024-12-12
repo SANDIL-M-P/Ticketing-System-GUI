@@ -1,27 +1,127 @@
-# NewSample1
+# Ticket Management System
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
+## Overview
 
-## Development server
+This is a distributed ticket management system designed to handle ticket allocation, release, and retrieval with real-time updates and configuration options.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## System Components
 
-## Code scaffolding
+The system consists of several key Angular components:
+- Input Configuration Form
+- Start/Stop Controls
+- Ticket Status Tracker
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Prerequisites
 
-## Build
+- Node.js (v16+ recommended)
+- Angular CLI
+- Java (for backend)
+- Maven or Gradle
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Backend Setup
 
-## Running unit tests
+### Backend Repository
+- Ensure you have the corresponding backend repository cloned
+- Backend should be running on `localhost:5050`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Required Backend Endpoints
+The backend must support the following REST and WebSocket endpoints:
 
-## Running end-to-end tests
+#### REST Endpoints
+- `POST /config/setup`: Configure system parameters
+- `GET /config/previous`: Retrieve previous configuration
+- `POST /config/start`: Start the ticket management system
+- `POST /config/stop`: Stop the ticket management system
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+#### WebSocket Endpoints
+- `/chat`: WebSocket connection for real-time updates
+- `/topic/ticketPool`: Receive ticket pool messages
+- `/topic/tickets`: Receive available ticket count
 
-## Further help
+## Frontend Setup
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Installation
+
+1. Clone the repository
+```bash
+git clone <your-repository-url>
+cd ticket-management-frontend
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Install required packages
+```bash
+npm install @angular/core @angular/forms sockjs-client stompjs
+```
+
+### Configuration Parameters
+
+The system allows configuration of:
+- Max Ticket Capacity
+- Total Ticket Capacity
+- Ticket Release Rate
+- Customer Retrieval Rate
+
+## Running the Application
+
+1. Start the backend service
+2. Run Angular application
+```bash
+ng serve
+```
+3. Access the application at `http://localhost:4200`
+
+## Usage Guide
+
+### Configuration
+1. Open the Configuration Settings form
+2. Enter parameters for:
+   - Max Ticket Capacity
+   - Total Ticket Capacity
+   - Ticket Release Rate
+   - Customer Retrieval Rate
+3. Click "Submit" to save configuration
+4. Use "Load Configuration" to retrieve previous settings
+
+### System Controls
+- Click "Start" to begin ticket management
+- Click "Stop" to halt the system
+
+### Monitoring
+The Ticket Status section provides:
+- Current number of Available Tickets
+- Real-time message updates about ticket pool
+
+## Troubleshooting
+
+### Common Issues
+- Ensure backend is running on `localhost:5050`
+- Check browser console for WebSocket and HTTP errors
+- Verify network connectivity
+
+### Logging
+- Backend logs: Check server console
+- Frontend logs: Browser developer tools console
+
+## Technology Stack
+- Frontend: Angular
+- Backend: Java (Spring Boot)
+- Communication: REST, WebSocket
+- Libraries: SockJS, StompJS
+
+## Contributing
+1. Fork the repository
+2. Create feature branch
+3. Commit changes
+4. Push to branch
+5. Create pull request
+
+## License
+[Specify your license here]
+
+## Contact
+[Your contact information or support email]
