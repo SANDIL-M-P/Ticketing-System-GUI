@@ -121,7 +121,10 @@ The Ticket Status section provides:
 5. Create pull request
 
 ## License
-[Specify your license here]
+This project is licensed under the MIT License - see the LICENSE.md file for details.
 
-## Contact
-[Your contact information or support email]
+## Author
+Sandil Peiris
+
+## Support
+For support, please open an issue in the GitHub repository.
